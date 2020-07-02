@@ -1,0 +1,127 @@
+<div class=" content">
+    <div class=" row">
+      
+        <div class="col-md-12">
+            
+            <div class=" card">
+                <div class=" card-header"><h2 class="text-muted">Editer une FactureFourn</h2></div>
+                <div class="card-body">
+                <form class="form-group" *ngIf="FactureFourn" #editForm="ngForm" (ngSubmit)="save()">
+                    <div class=" row">
+                     
+                    <div class=" col-md-5 pr-md-1">
+                        <div *ngIf="feedback" class="form-group">
+                            <div role="alert" class="alert alert-{{feedback.type}}" > 
+                            {{feedback.message}}
+                            </div>  
+                        </div>  
+                        <div  class="form-group">
+                            <label>  rowid  </label>
+                            <input  disabled class=" form-control" [(ngModel)]="FactureFourn.rowid" name="id" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  facnumber  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.facnumber" name="facnumber" placeholder="facnumber" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  entity  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.entity" name="entity" placeholder="entity" type="number"/>
+                        </div>
+                        
+                        <div  class="form-group">
+                            <label>  type  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.type" name="type" placeholder="type" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  datec  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.datec" name="datec" placeholder="datec" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  datef  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.datef" name="datef" placeholder="datef" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  tms  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.tms" name="tms" placeholder="tms" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  libelle  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.libelle" name="libelle" placeholder="libelle" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  amount  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.amount" name="amount" placeholder="amount" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  remise  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.remise" name="remise" placeholder="remise" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  close_code  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.close_code" name="close_code" placeholder="close_code" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  close_note  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.close_note" name="close_note" placeholder="close_note" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  tva  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.tva" name="tva" placeholder="tva" type="number"/>
+                        </div>    
+                        <div  class="form-group">
+                            <label>  localtax1  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.localtax1" name="localtax1" placeholder="localtax1" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  localtax2  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.localtax2" name="localtax2" placeholder="localtax2" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  total  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.total" name="total" placeholder="total" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  total_ht  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.total_ht" name="total_ht" placeholder="total_ht" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  total_tva  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.total_tva" name="total_tva" placeholder="total_tva" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  total_ttc  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.total_ttc" name="total_ttc" placeholder="total_ttc" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  date_lim_reglement  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.date_lim_reglement" name="date_lim_reglement" placeholder="date_lim_reglement" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label> note  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.note" name="note" placeholder="note" type="text"/>
+                        </div>    
+                        <div  class="form-group">
+                            <label> note_public  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.note_public" name="note_public" placeholder="note_public" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label> import_key  </label>
+                            <input class=" form-control" [(ngModel)]="FactureFourn.import_key" name="import_key" placeholder="import_key" type="text"/>
+                        </div> 
+                        <div  class="form-group">
+                            <input  value="save" class="btn btn-primary" [disabled]="!editForm.form.valid" type="submit"/>
+                            <input value="cancel" class="btn btn-secondary" (click)="cancel()" type="submit"/>
+                        </div>    
+                        <div *ngIf="feedback" class="form-group">
+                            <div role="alert" class="alert alert-{{feedback.type}}" > 
+                            {{feedback.message}}
+                            </div>  
+                        </div>
+                    </div>
+                    </div>    
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

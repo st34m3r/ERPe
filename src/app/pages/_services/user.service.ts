@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const API_URL = 'http://defc28a7131c.ngrok.io/api/test/';
+const API_URL = 'http://7b436016388b.ngrok.io/api/test/';
 
 @Injectable({
   providedIn: 'root'

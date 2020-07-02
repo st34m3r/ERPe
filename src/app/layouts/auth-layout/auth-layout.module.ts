@@ -6,7 +6,6 @@ import {AuthLayoutRoutes} from './auth-layout.routing';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from "@angular/common/http";
 
-import {RtlComponent} from '../../pages/rtl/rtl.component';
 
 @NgModule({
   imports: [
@@ -17,7 +16,7 @@ import {RtlComponent} from '../../pages/rtl/rtl.component';
     NgbModule
   ],
   declarations: [
-    RtlComponent,
+   
   ]
 })
 export class AuthLayoutModule {

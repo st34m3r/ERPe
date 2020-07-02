@@ -16,7 +16,10 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { ProductsModule } from 'src/app/pages/products/products.module';
 import { commandesModule } from 'src/app/pages/commandes/commandes.module';
 import { canusersModule } from 'src/app/pages/canusers/canusers.module';
-
+import { FactureFournsModule } from 'src/app/pages/fournisseurs/FactureFourns.module';
+import { purchasesModule } from 'src/app/pages/puchases/purchases.module'
+import {salesModule} from 'src/app/pages/sales/sales.module'
+import { marketingModule } from 'src/app/pages/marketing/marketing.module'
 @NgModule({
   imports: [
     CommonModule,
@@ -26,7 +29,11 @@ import { canusersModule } from 'src/app/pages/canusers/canusers.module';
     NgbModule,
     ProductsModule,
     commandesModule,
-    canusersModule
+    canusersModule,
+    FactureFournsModule,
+    purchasesModule,
+    salesModule,
+    marketingModule
     
   ],
   declarations: [

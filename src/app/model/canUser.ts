@@ -9,17 +9,10 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { CommandeFournisseurLog } from './commandeFournisseurLog';
-import { ProductFournisseurPrice } from './productFournisseurPrice';
-import { ProductFournisseurPriceLog } from './productFournisseurPriceLog';
-import { UserParam } from './userParam';
-import { UserRights } from './userRights';
-import { UsergroupUser } from './usergroupUser';
 
 
 export interface CanUser { 
     admin?: number;
-    commandeFournisseurLogs?: Array<CommandeFournisseurLog>;
     datec?: Date;
     datelastlogin?: Date;
     datepreviouslogin?: Date;
@@ -42,14 +35,9 @@ export interface CanUser {
     phenixLogin?: string;
     phenixPass?: string;
     photo?: string;
-    productFournisseurPriceLogs?: Array<ProductFournisseurPriceLog>;
-    productFournisseurPrices?: Array<ProductFournisseurPrice>;
     rowid?: number;
     statut?: number;
     tms?: Date;
     userMobile?: string;
-    userParam?: UserParam;
-    userRights?: Array<UserRights>;
-    usergroupUsers?: Array<UsergroupUser>;
     webcalLogin?: string;
 }

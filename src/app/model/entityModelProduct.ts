@@ -44,5 +44,4 @@ export interface EntityModelProduct {
     tosell?: number;
     volume?: number;
     volumeUnits?: number;
-    weight?: number;
 }

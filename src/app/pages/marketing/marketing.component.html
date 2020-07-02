@@ -1,0 +1,24 @@
+
+<div class="content">
+  <div class="row">
+   <div class="card"  > 
+    <div class="table-responsive">
+      <div class="col-sm-6 text-left">
+        <h5 class="card-category">Marketing</h5>
+        <h2 class="card-title">Sales Prediction :</h2>
+      </div>
+      <ejs-chart id="chart-container" [primaryXAxis]='primaryXAxis'>
+        <e-series-collection>
+            <e-series [dataSource]='chartData' type='Line' xName='month' yName='sales' name='Sales'></e-series>
+        </e-series-collection>
+    </ejs-chart>
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Tommorrows prediction : </h5>
+        <h3> {{prediction[0].Date}} : {{ prediction[0].value }}k $ </h3>
+      
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

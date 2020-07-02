@@ -65,7 +65,7 @@ import { UsergroupUserEntityService } from './api/usergroupUserEntity.service';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { PurchaseEntityService, SaleEntityService } from './api/api';
 @NgModule({
   imports:      [
     BrowserAnimationsModule,
@@ -76,7 +76,8 @@ import { BrowserModule } from '@angular/platform-browser';
     NgbModule,
     RouterModule,
     AppRoutingModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot()
+    
   ],
   declarations: [
     AppComponent,
@@ -93,7 +94,8 @@ import { BrowserModule } from '@angular/platform-browser';
   ],
   bootstrap: [AppComponent],
   providers: [
-    
+    PurchaseEntityService,
+    SaleEntityService,
     AuthControllerService,
     BankAccountEntityService,
     BankCategEntityService,

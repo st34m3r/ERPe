@@ -52,7 +52,7 @@ export const ROUTES: RouteInfo[] = [
     ]
   },
   {
-    path: "/maps",
+    path: "/company",
     title: "Company",
     rtlTitle: "خرائط",
     icon: "",
@@ -60,31 +60,38 @@ export const ROUTES: RouteInfo[] = [
     children : []
    },
   {
-    path: "/notifications",
-    title: "Customers and Suppliers",
+    path: "/FactureFourns",
+    title: "facture fournisseur",
     rtlTitle: "إخطارات",
     icon: "",
     class: "",
-    children : []
+    children : [
+      {path: "/newFactureFourn",title: "new facture fournisseur"},
+
+    ]
   },
   {
-    path: "/tables",
-    title: "Purshases",
+    path: "/purchases",
+    title: "Purchases",
     rtlTitle: "قائمة الجدول",
     icon: "",
     class: "",
-    children : []
+    children : [
+      {path: "/newpurchase",title: "new purchase"}
+    ]
   },
   {
-    path: "/typography",
+    path: "/sales",
     title: "Sales",
     rtlTitle: "طباعة",
     icon: "",
     class: "",
-    children : []
+    children : [
+      {path: "/newsale",title: "new sale"}
+    ]
   },
   {
-    path: "/typography",
+    path: "/marketing",
     title: "Financial Statements",
     rtlTitle: "طباعة",
     icon: "",

@@ -35,7 +35,7 @@ import { Configuration }                                     from '../configurat
 @Injectable()
 export class CommandeEntityService {
 
-    protected basePath = 'http://defc28a7131c.ngrok.io';
+    protected basePath = 'https://7b436016388b.ngrok.io';
     public defaultHeaders = new HttpHeaders();
     public configuration = new Configuration();
 
