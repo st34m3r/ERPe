@@ -1,0 +1,90 @@
+<div class=" content">
+    <div class=" row">
+      
+        <div class="col-md-12">
+            
+            <div class=" card">
+                <div class=" card-header"><h2 class="text-muted">Editer un produit</h2></div>
+                <div class="card-body">
+                <form class="form-group" *ngIf="product" #editForm="ngForm" (ngSubmit)="save()">
+                    <div class=" row">
+                     
+                    <div class=" col-md-5 pr-md-1">
+                        <div *ngIf="feedback" class="form-group">
+                            <div role="alert" class="alert alert-{{feedback.type}}" > 
+                            {{feedback.message}}
+                            </div>  
+                        </div>
+                        <div  class="form-group">
+                            <label>  rowid  </label>
+                            <input  disabled class=" form-control" [(ngModel)]="product.rowid" name="id" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  datec  </label>
+                            <input class=" form-control" [(ngModel)]="product.datec" name="date" placeholder="datec" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  ref  </label>
+                            <input class=" form-control" [(ngModel)]="product.ref" name="ref" placeholder="ref" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  description  </label>
+                            <input class=" form-control" [(ngModel)]="product.description" name="description" placeholder="description" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  price  </label>
+                            <input class=" form-control" [(ngModel)]="product.price" name="price" placeholder="price" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  priceTtc  </label>
+                            <input class=" form-control" [(ngModel)]="product.price_ttc" name="priceTtc" placeholder="priceTtc" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  tosell  </label>
+                            <input class=" form-control" [(ngModel)]="product.tosell" name="tosell" placeholder="tosell" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  tobuy  </label>
+                            <input class=" form-control" [(ngModel)]="product.tobuy" name="tobuy" placeholder="tobuy" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  SeuilStockAlerte  </label>
+                            <input class=" form-control" [(ngModel)]="product.seuil_stock_alerte" name="SeuilStockAlerte" placeholder="SeuilStockAlerte" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  volume  </label>
+                            <input class=" form-control" [(ngModel)]="product.volume" name="volume" placeholder="volume" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  volumeUnits  </label>
+                            <input class=" form-control" [(ngModel)]="product.volume_units" name="volumeUnits" placeholder="volumeUnits" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  stock  </label>
+                            <input class=" form-control" [(ngModel)]="product.stock" name="stock" placeholder="stock" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  finished  </label>
+                            <input class=" form-control" [(ngModel)]="product.finished" name="finished" placeholder="finished" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  importKey  </label>
+                            <input class=" form-control" [(ngModel)]="product.import_key" name="importKey" placeholder="importKey" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <input  value="save" class="btn btn-primary" [disabled]="!editForm.form.valid" type="submit"/>
+                            <input value="cancel" class="btn btn-secondary" (click)="cancel()" type="submit"/>
+                        </div>    
+                        <div *ngIf="feedback" class="form-group">
+                            <div role="alert" class="alert alert-{{feedback.type}}" > 
+                            {{feedback.message}}
+                            </div>  
+                        </div>
+                    </div>
+                    </div>    
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

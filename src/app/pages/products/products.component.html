@@ -1,0 +1,49 @@
+
+<div class="content">
+  <div class="row">
+   <div class="card"  > 
+    <div class="table-responsive">
+      <table class="table table-centered table-hover mb-0" id="datatable">
+        <thead>
+          <tr class="blockquote blockquote-danger">
+            <th></th>
+            <th></th>
+            <th>datec</th>
+            <th>description</th>
+            <th>finished</th>
+            <th>import_key</th>
+            <th>price</th>
+            <th>price_ttc</th>
+            <th>ref</th>
+            <th>seuil_stsock_alerte</th>
+            <th>stock</th>
+            <th>tobuy</th>
+            <th>tosell</th>
+            <th>volume</th>
+            <th>volume_units</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+              <td><input (click)="delete(p)" type="button" value="delete" /></td>
+              <td><input [routerLink]="['../products', p.rowid ]" type="button" value="edit" /></td>
+              <td>{{p.datec}}</td>
+              <td>{{p.description}}</td>
+              <td>{{p.finished}}</td>
+              <td>{{p.import_key}}</td>
+              <td>{{p.price}}</td>
+              <td>{{p.price_ttc}}</td>
+              <td>{{p.ref}}</td>
+              <td>{{p.seuil_stock_alerte}}</td>
+              <td>{{p.stock}}</td>
+              <td>{{p.tobuy}}</td>
+              <td>{{p.tosell}}</td>
+              <td>{{p.volume}}</td>
+              <td>{{p.volume_units}}</td>
+              
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

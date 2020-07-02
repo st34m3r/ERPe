@@ -1,0 +1,143 @@
+<div class=" content">
+    <div class=" row">
+      
+        <div class="col-md-12">
+            
+            <div class=" card">
+                <div class=" card-header"><h2 class="text-muted">creer une canuser</h2></div>
+                <div class="card-body">
+                <form class="form-group" *ngIf="canuser" #editForm="ngForm" (ngSubmit)="save()">
+                    <div class=" row">
+                     
+                    <div class=" col-md-5 pr-md-1">
+                        <div *ngIf="feedback" class="form-group">
+                            <div role="alert" class="alert alert-{{feedback.type}}" > 
+                            {{feedback.message}}
+                            </div>  
+                        </div>
+                        <div  class="form-group">
+                            <label>  datec  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.datec" name="datec" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  tms  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.tms" name="tms" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  login  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.login" name="login" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  entity  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.entity" name="entity" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  password  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.pass" name="pass" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  password  crypted </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.pass_crypted" name="pass_crypted" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  password  temp </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.pass_temp" name="pass_temp" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  name  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.name" name="name" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  first name  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.firstname" name="firstname" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  office_phone  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.office_phone" name="office_phone" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  office_fax  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.office_fax" name="office_fax" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  user_mobile  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.user_mobile" name="user_mobile" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  email  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.email" name="email" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  admin  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.admin" name="admin" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  webcal_login  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.webcal_login" name="webcal_login" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  phenix_login  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.phenix_login" name="phenix_login" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  phenix_pass  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.phenix_pass" name="phenix_pass" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  module_comm  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.module_comm" name="module_comm" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  module_compta  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.module_compta" name="module_compta" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  note  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.note" name="note" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  datelastlogin  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.datelastlogin" name="datelastlogin" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  datepreviouslogin  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.datepreviouslogin" name="datepreviouslogin" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  egroupware_id  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.egroupware_id" name="egroupware_id" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  ldap_sid  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.ldap_sid" name="ldap_sid" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  statut  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.statut" name="statut" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  photo  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.photo" name="photo" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  lang  </label>
+                            <input   class=" form-control" [(ngModel)]="canuser.lang" name="lang" type="text"/>
+                        </div>
+                      
+                        <div  class="form-group">
+                            <input  value="create" class="btn btn-primary" [disabled]="!editForm.form.valid" type="submit"/>
+                            <input value="cancel" class="btn btn-secondary" (click)="cancel()" type="submit"/>
+                        </div>    
+                        <div *ngIf="feedback" class="form-group">
+                            <div role="alert" class="alert alert-{{feedback.type}}" > 
+                            {{feedback.message}}
+                            </div>  
+                        </div>
+                    </div>
+                    </div>    
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

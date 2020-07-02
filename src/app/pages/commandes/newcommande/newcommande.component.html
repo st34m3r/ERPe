@@ -1,0 +1,126 @@
+<div class=" content">
+    <div class=" row">
+      
+        <div class="col-md-12">
+            
+            <div class=" card">
+                <div class=" card-header"><h2 class="text-muted">creer une commande</h2></div>
+                <div class="card-body">
+                <form class="form-group" *ngIf="commande" #editForm="ngForm" (ngSubmit)="save()">
+                    <div class=" row">
+                     
+                    <div class=" col-md-5 pr-md-1">
+                        <div *ngIf="feedback" class="form-group">
+                            <div role="alert" class="alert alert-{{feedback.type}}" > 
+                            {{feedback.message}}
+                            </div>  
+                        </div>
+                        <div  class="form-group">
+                            <label>  tms  </label>
+                            <input class=" form-control" [(ngModel)]="commande.tms" name="tms" placeholder="tms" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  reference  </label>
+                            <input class=" form-control" [(ngModel)]="commande.reference" name="reference" placeholder="reference" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  entity  </label>
+                            <input class=" form-control" [(ngModel)]="commande.entity" name="entity" placeholder="entity" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  ref client  </label>
+                            <input class=" form-control" [(ngModel)]="commande.ref_client" name="reference" placeholder="reference" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  date_creation  </label>
+                            <input class=" form-control" [(ngModel)]="commande.date_creation" name="date_creation" placeholder="date_creation" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  date_valide  </label>
+                            <input class=" form-control" [(ngModel)]="commande.date_valide" name="date_valide" placeholder="date_valide" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  date_cloture  </label>
+                            <input class=" form-control" [(ngModel)]="commande.date_cloture" name="date_cloture" placeholder="date_cloture" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  date_commande  </label>
+                            <input class=" form-control" [(ngModel)]="commande.date_commande" name="date_commande" placeholder="date_commande" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  source  </label>
+                            <input class=" form-control" [(ngModel)]="commande.source" name="source" placeholder="source" type="number"/>
+                        </div>    
+                        <div  class="form-group">
+                            <label>  amount_ht  </label>
+                            <input class=" form-control" [(ngModel)]="commande.amount_ht" name="amount_ht" placeholder="amount_ht" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  remise_percent  </label>
+                            <input class=" form-control" [(ngModel)]="commande.remise_percent" name="remise_percent" placeholder="remise_percent" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  remise_absolue  </label>
+                            <input class=" form-control" [(ngModel)]="commande.remise_absolue" name="remise_absolue" placeholder="remise_absolue" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  remise  </label>
+                            <input class=" form-control" [(ngModel)]="commande.remise" name="remise" placeholder="remise" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  tva  </label>
+                            <input class=" form-control" [(ngModel)]="commande.tva" name="tva" placeholder="tva" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  localtax1  </label>
+                            <input class=" form-control" [(ngModel)]="commande.localtax1" name="localtax1" placeholder="localtax1" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  localtax2  </label>
+                            <input class=" form-control" [(ngModel)]="commande.localtax2" name="localtax2" placeholder="localtax2" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  total_ht  </label>
+                            <input class=" form-control" [(ngModel)]="commande.total_ht" name="total_ht" placeholder="total_ht" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  total_ttc  </label>
+                            <input class=" form-control" [(ngModel)]="commande.total_ttc" name="total_ttc" placeholder="total_ttc" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label> note  </label>
+                            <input class=" form-control" [(ngModel)]="commande.note" name="note" placeholder="note" type="text"/>
+                        </div>    
+                        <div  class="form-group">
+                            <label> note_public  </label>
+                            <input class=" form-control" [(ngModel)]="commande.note_public" name="note_public" placeholder="note_public" type="text"/>
+                        </div>
+                        <div  class="form-group">
+                            <label> model_pdf  </label>
+                            <input class=" form-control" [(ngModel)]="commande.model_pdf" name="model_pdf" placeholder="model_pdf" type="text"/>
+                        </div> 
+                        <div  class="form-group">
+                            <label>  facture  </label>
+                            <input class=" form-control" [(ngModel)]="commande.facture" name="facture" placeholder="facture" type="number"/>
+                        </div>
+                        <div  class="form-group">
+                            <label>  date_livraison  </label>
+                            <input class=" form-control" [(ngModel)]="commande.tms" name="tms" placeholder="tms" type="date"/>
+                        </div>
+                        <div  class="form-group">
+                            <input  value="create" class="btn btn-primary" [disabled]="!editForm.form.valid" type="submit"/>
+                            <input value="cancel" class="btn btn-secondary" (click)="cancel()" type="submit"/>
+                        </div>    
+                        <div *ngIf="feedback" class="form-group">
+                            <div role="alert" class="alert alert-{{feedback.type}}" > 
+                            {{feedback.message}}
+                            </div>  
+                        </div>
+                    </div>
+                    </div>    
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

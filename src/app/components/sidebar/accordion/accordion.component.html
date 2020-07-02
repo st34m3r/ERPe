@@ -1,0 +1,21 @@
+<nav [ngClass]="{ sidebarPushRight: isActive, collapsed: collapsed }" class="{{ menuItem.class }} nav-item">
+    <div class="list-group">
+        <div class="nested-menu">
+            <a [routerLink]="[menuItem.path]" (click)="addExpandClass('pages')" class="list-group-item">
+                <i class="  {{ menuItem.icon }} "></i>
+                <!--<i class="fa fa-plus"></i>&nbsp;-->
+                <span>{{ menuItem.title }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'pages'" class="nested">
+                <ul class="submenu">
+                    <li *ngFor="let iter of menuItem.children" >
+                        <a [routerLink]="[iter.path]" class="sub">
+                            <i class="fa fa-plus"></i>
+                            <span>{{ iter.title }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,27 @@
+
+<div class="content">
+  <div class="row">
+   <div class="card"  > 
+    <div class="table-responsive">
+      <table class="table table-centered table-hover mb-0" id="datatable">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th *ngFor="let row of canusers[0] | keyvalue"> {{row.key}}</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of canusers">
+              <td><input (click)="delete(p)" type="button" value="delete" /></td>
+              <td><input [routerLink]="['../canusers', p.rowid ]" type="button" value="edit" /></td>
+              <td  *ngFor="let c of p | keyvalue"> {{c.value}}</td>
+             
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
