@@ -13,7 +13,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.sid.can_db_handler_service.sec.security.jwt.AuthEntryPointJwt;
 import org.sid.can_db_handler_service.sec.security.jwt.AuthTokenFilter;
 import org.sid.can_db_handler_service.sec.security.services.UserDetailsServiceImpl;
@@ -25,6 +25,7 @@ import org.sid.can_db_handler_service.sec.security.services.UserDetailsServiceIm
 		// jsr250Enabled = true,
 		prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+	
 	@Autowired
 	UserDetailsServiceImpl userDetailsService;
 
@@ -62,5 +63,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.anyRequest().authenticated();
 
 		http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+	}
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**");
 	}
 }

@@ -63,16 +63,16 @@ public class CanUser {
     private int statut;
     private String photo;
     private String lang;
-    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
-    private Set<Product_fournisseur_price> product_fournisseur_prices;
-    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
-    private Set<Product_fournisseur_price_log> product_fournisseur_price_logs;
-    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
-    private Set<Commande_fournisseur_log> commande_fournisseur_logs;
-    @OneToOne
-    private User_param user_param;
-    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
-    private Set<User_rights> user_rights;
-    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
-    private Set<Usergroup_user> usergroup_users;
+//    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
+//    private Set<Product_fournisseur_price> product_fournisseur_prices;
+//    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
+//    private Set<Product_fournisseur_price_log> product_fournisseur_price_logs;
+//    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
+//    private Set<Commande_fournisseur_log> commande_fournisseur_logs;
+//    @OneToOne
+//    private User_param user_param;
+//    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
+//    private Set<User_rights> user_rights;
+//    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
+//    private Set<Usergroup_user> usergroup_users;
 }

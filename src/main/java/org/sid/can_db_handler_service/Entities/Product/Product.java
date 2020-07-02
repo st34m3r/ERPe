@@ -17,6 +17,7 @@ import org.sid.can_db_handler_service.Entities.Invoice.Facturedet_rec;
 import org.sid.can_db_handler_service.Entities.Order.Commandedet;
 import org.sid.can_db_handler_service.Entities.Supplier.Commande_fournisseurdet;
 import org.sid.can_db_handler_service.Entities.Supplier.Facture_fourn_det;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -39,8 +40,7 @@ public class Product implements Serializable {
     private String description;
     private double price;
     private double price_ttc;
-    private double price_min;
-    private double tva_tx;
+
     /* foring key a faire
     private int fk_user_author;
     end
@@ -56,7 +56,6 @@ public class Product implements Serializable {
     private int fk_barcode_type;
     end
      */   
-    private float weight;
     private float volume;
     private int volume_units;
     private int stock;

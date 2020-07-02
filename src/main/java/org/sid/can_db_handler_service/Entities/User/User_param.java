@@ -6,6 +6,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +22,8 @@ public class User_param {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int rowid;
     @OneToOne
+    @NotFound(
+    	    action = NotFoundAction.IGNORE)
     private CanUser user;
     private int entity;
     private String param;
